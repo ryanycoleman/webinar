@@ -22,6 +22,7 @@ class webinar::web {
   
   apache::vhost { 'health.check':
     port    => '80',
+    docroot => '/var/www/html',
   }
   
   firewall { '100 allow http and https access':
